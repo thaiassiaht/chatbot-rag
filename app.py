@@ -13,6 +13,19 @@ Original file is located at
 
 """
 
+@st.cache_resource
+def carregar_base():
+    arquivos = [
+        "reviews_mercadolivre_com_br_1.json",
+        "reviews_mercadolivre_com_br_2.json"
+    ]
+
+    data = []  
+
+    for arquivo in arquivos:
+        with open(arquivo, "r", encoding="utf-8") as f:
+            data.extend(json.load(f))
+
 def sentimento(nota):
     if nota >= 4:
         return "positivo"
