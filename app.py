@@ -12,6 +12,7 @@ Original file is located at
 """Criando os chunkings
 
 """
+import streamlit as st
 
 @st.cache_resource
 def carregar_base():
