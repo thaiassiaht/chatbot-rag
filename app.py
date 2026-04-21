@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1KpTlC4HgRHHTPK6z8FXogCqncTtmu6b-
 """
 
-!pip install sentence-transformers qdrant-client
+
 
 from google.colab import drive
 drive.mount('/content/drive')
@@ -123,7 +123,6 @@ Nota: {payload['nota']}
 def extrair_nome_produto(url):
     return url.split("/")[-1].replace("-", " ")
 
-!pip install groq
 
 from groq import Groq
 
